@@ -1,7 +1,21 @@
 {% extends 'core/base.html' %}
 
 {% block title %}About - Personal Command Center{% endblock %}
-<h1>About Me</h1>
-<p>I am becoming a calm and powerful backend engineer.</p>  
-
 {% block content %}
+	<section class="rounded-2xl border border-slate-200/80 bg-white/85 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+		<p class="text-sm font-semibold uppercase tracking-[0.14em] text-blue-700">About</p>
+		<h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">Building a calm and powerful backend mindset</h1>
+		<p class="mt-4 max-w-3xl text-slate-600">This space reflects your growth as a backend engineer: focused execution, clear architecture, and steady progress every week.</p>
+	</section>
+
+	<section class="mt-6 grid gap-4 md:grid-cols-2">
+		<article class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+			<h2 class="text-lg font-semibold text-slate-900">How you work</h2>
+			<p class="mt-2 text-sm text-slate-600">You prefer clarity over noise, minimal solutions over overengineering, and shipping over perfectionism.</p>
+		</article>
+		<article class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+			<h2 class="text-lg font-semibold text-slate-900">What this site is for</h2>
+			<p class="mt-2 text-sm text-slate-600">A single control panel for your journey: learning milestones, project direction, and personal mission.</p>
+		</article>
+	</section>
+{% endblock %}
