@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Personal Command Center{% endblock %}</title>
     <script>
-        tailwind = {
+        window.tailwind = {
             config: {
                 darkMode: 'class'
             }
@@ -16,6 +16,7 @@
             const shouldUseDark = savedTheme ? savedTheme === 'dark' : prefersDark;
 
             document.documentElement.classList.toggle('dark', shouldUseDark);
+            document.documentElement.style.colorScheme = shouldUseDark ? 'dark' : 'light';
         })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -102,16 +103,16 @@
                 </button>
             </div>
             <div class="hidden items-center gap-1 rounded-xl bg-slate-100 p-1 text-sm font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-200 md:flex">
-                <a href="{url 'core:home'}" class="ui-nav-link {% if request.path == '/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Home</a>
-                <a href="{url 'core:about'}" class="ui-nav-link {% if request.path == '/about/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">About</a>
-                <a href="{url 'core:mission'}" class="ui-nav-link {% if request.path == '/mission/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Mission</a>
+                <a href="{% url 'core:home' %}" class="ui-nav-link {% if request.path == '/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Home</a>
+                <a href="{% url 'core:about' %}" class="ui-nav-link {% if request.path == '/about/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">About</a>
+                <a href="{% url 'core:mission' %}" class="ui-nav-link {% if request.path == '/mission/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Mission</a>
             </div>
         </div>
         <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-3 dark:border-slate-700 dark:bg-slate-900 md:hidden">
             <div class="space-y-1 text-sm font-medium text-slate-700 dark:text-slate-200">
-                <a href="/" class="block rounded-lg px-3 py-2 {% if request.path == '/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">Home</a>
-                <a href="/about/" class="block rounded-lg px-3 py-2 {% if request.path == '/about/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">About</a>
-                <a href="/mission/" class="block rounded-lg px-3 py-2 {% if request.path == '/mission/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">Mission</a>
+                <a href="{% url 'core:home' %}" class="block rounded-lg px-3 py-2 {% if request.path == '/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">Home</a>
+                <a href="{% url 'core:about' %}" class="block rounded-lg px-3 py-2 {% if request.path == '/about/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">About</a>
+                <a href="{% url 'core:mission' %}" class="block rounded-lg px-3 py-2 {% if request.path == '/mission/' %}bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100{% else %}hover:bg-slate-100 dark:hover:bg-slate-800{% endif %}">Mission</a>
             </div>
         </div>
     </nav>
@@ -137,6 +138,7 @@
             function setTheme(mode) {
                 const isDark = mode === 'dark';
                 document.documentElement.classList.toggle('dark', isDark);
+                document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
                 localStorage.setItem('theme', mode);
                 if (themeToggle) {
                     themeToggle.textContent = isDark ? 'Light' : 'Dark';
