@@ -102,9 +102,9 @@
                 </button>
             </div>
             <div class="hidden items-center gap-1 rounded-xl bg-slate-100 p-1 text-sm font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-200 md:flex">
-                <a href="/" class="ui-nav-link {% if request.path == '/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Home</a>
-                <a href="/about/" class="ui-nav-link {% if request.path == '/about/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">About</a>
-                <a href="/mission/" class="ui-nav-link {% if request.path == '/mission/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Mission</a>
+                <a href="{url 'core:home'}" class="ui-nav-link {% if request.path == '/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Home</a>
+                <a href="{url 'core:about'}" class="ui-nav-link {% if request.path == '/about/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">About</a>
+                <a href="{url 'core:mission'}" class="ui-nav-link {% if request.path == '/mission/' %}bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-100{% else %}hover:bg-white/70 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-100{% endif %}">Mission</a>
             </div>
         </div>
         <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-3 dark:border-slate-700 dark:bg-slate-900 md:hidden">
