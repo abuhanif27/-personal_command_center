@@ -3,24 +3,27 @@
 {% block title %}Home - Personal Command Center{% endblock %}
 
 {% block content %}
-    <section class="rounded-2xl border border-slate-200/80 bg-white/85 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-cyan-700">Dashboard</p>
+    <section class="ui-hero reveal">
+        <p class="ui-kicker text-cyan-700">Dashboard</p>
         <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Welcome to your personal command center</h1>
         <p class="mt-4 max-w-2xl text-slate-600">A focused workspace to track your backend engineering journey, keep momentum high, and move one clear step at a time.</p>
+        <div class="mt-6">
+            <a href="/mission/" class="ui-button-primary">View Mission</a>
+        </div>
     </section>
 
-    <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+    <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 reveal reveal-delay-1">
+        <article class="ui-card">
             <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Current focus</p>
             <h2 class="mt-2 text-lg font-semibold text-slate-900">Django foundations</h2>
             <p class="mt-2 text-sm text-slate-600">Build clean routes, reusable templates, and reliable backend habits.</p>
         </article>
-        <article class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <article class="ui-card">
             <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Cadence</p>
             <h2 class="mt-2 text-lg font-semibold text-slate-900">Small daily wins</h2>
             <p class="mt-2 text-sm text-slate-600">Consistent shipping compounds into confidence and technical depth.</p>
         </article>
-        <article class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 lg:col-span-1">
+        <article class="ui-card sm:col-span-2 lg:col-span-1">
             <p class="text-xs font-semibold uppercase tracking-wide text-orange-700">Principle</p>
             <h2 class="mt-2 text-lg font-semibold text-slate-900">Calm and powerful</h2>
             <p class="mt-2 text-sm text-slate-600">Stay clear under pressure and keep your code easy to maintain.</p>
