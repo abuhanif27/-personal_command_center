@@ -4,23 +4,21 @@
 
 {% block content %}
     <section class="ui-hero reveal">
-        <p class="ui-kicker text-emerald-700">Mission</p>
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">Build with discipline, learn with intention</h1>
-        <p class="mt-4 max-w-3xl text-slate-600">The mission of this command center is to keep your engineering path simple and actionable: strengthen backend fundamentals, document progress, and ship meaningful work consistently.</p>
+        {% include 'core/partials/section_heading.html' with kicker='Mission' title='Build with discipline, learn with intention' description='The mission of this command center is to keep your engineering path simple and actionable: strengthen backend fundamentals, document progress, and ship meaningful work consistently.' kicker_color='text-emerald-700 dark:text-emerald-300' %}
     </section>
 
     <section class="mt-6 grid gap-4 md:grid-cols-3 reveal reveal-delay-2">
         <article class="ui-card">
-            <h2 class="text-base font-semibold text-slate-900">1. Master Core Skills</h2>
-            <p class="mt-2 text-sm text-slate-600">Own Django, Python, APIs, and data modeling through repetition and real usage.</p>
+            <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">1. Master Core Skills</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Own Django, Python, APIs, and data modeling through repetition and real usage.</p>
         </article>
         <article class="ui-card">
-            <h2 class="text-base font-semibold text-slate-900">2. Build Real Projects</h2>
-            <p class="mt-2 text-sm text-slate-600">Turn concepts into practical features and deployable backend systems.</p>
+            <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">2. Build Real Projects</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Turn concepts into practical features and deployable backend systems.</p>
         </article>
         <article class="ui-card">
-            <h2 class="text-base font-semibold text-slate-900">3. Stay Consistent</h2>
-            <p class="mt-2 text-sm text-slate-600">Keep a calm pace, review often, and improve the system week by week.</p>
+            <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">3. Stay Consistent</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Keep a calm pace, review often, and improve the system week by week.</p>
         </article>
     </section>
 {% endblock %}
